@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").on("click", function(){
+                $("#coin").hide();
+            })
+            $("#show").on("click", function(){
+                $("#coin").show();
+            })
+            $("#toggle").on("click", function(){
+                $("#coin").toggle();
+            })
+            $("#slideDown").on("click", function(){
+                $("#coin").slideDown();
+            })
+            $("#slideUp").on("click", function(){
+                $("#coin").slideUp();
+            })
+            $("#slideToggle").on("click", function(){
+                $("#coin").slideToggle();
+            })
+            $("#fadeIn").on("click", function(){
+                $("#coin").fadeIn();
+            })
+            $("#fadeOut").on("click", function(){
+                $("#coin").fadeOut();
+            })
+
+
+        });
+    </script>
+    <style type="text/css">
+    #container{
+        background-color: beige;
+        width: 970px;
+        margin: auto;
+        padding: 50px;
+    }
+    #titulo {
+        text-align: center;
+    }
+        .row div.col{
+            display: inline-block;
+            border: 1px solid black;
+            margin: 10px;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            padding-top: 80px;
+            font-size: 30px;
+        }
+    </style>
+    </head>
+<body>
+    <div id="container">
+        <div>
+            <h1 id="titulo">Funciones de jQuery</h1>
+        </div>
+        <div class="row">
+            <button class="col" id="hide">.hide</button>
+            <button class="col" id="show">.show</button>
+            <button class="col" id="toggle">.toggle</button>
+            <button class="col" id="slideUp">.slideUp</button>
+        </div>
+        <div class="row">
+            <button class="col" id="slideDown">.slideDown</button>
+            <button class="col" id="slideToggle">.slideToggle</button>
+            <button class="col" id="fadeOut">.fadeOut</button>
+            <button class="col" id="fadeIn">.fadeIn</button>
+        </div>
+        <div>
+            <img id="coin" src="coin.gif">
+        </div>
+    </div>
+</body>
+</html>
